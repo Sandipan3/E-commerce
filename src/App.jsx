@@ -3,15 +3,16 @@ import ProductList from './components/ProductList'
 import Cart from './components/Cart'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
+import Layout from './Layout'
 
 const router = createBrowserRouter([
   {
     path : '/',
-    element : <ProductList />
-  },
-  {
-    path : '/cart',
-    element : <Cart />
+    element : <Layout />,
+    children : [
+      {path : '/', element : <ProductList /> },
+      {path : '/cart', element : <Cart /> }
+    ]
   }
 ])
 

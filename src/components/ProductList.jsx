@@ -20,7 +20,6 @@ const ProductList = () => {
 
   return (
     <>
-    <Navbar />
     <div className="product-list">
         {items.map((item) =>(
             <div className="product-card" key={item.id}>
